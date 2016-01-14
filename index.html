@@ -7,7 +7,38 @@
 
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/github-light.css">
+    <style>
+      body {
+        background: white;
+      }
+      
+      .choice > div {
+        cursor: default;
+      }
+
+      .choice > div > * {
+        display: block;
+        margin-top: 10px;
+        width:   100%;
+      }
+      
+      .choice > div:nth-child(2n) {
+        background: #F8F8F8;
+      }
+      
+      powerup {
+        display: block;
+        margin-top: 2em;
+      }
+
+      romaji,
+      .choice > div > * {
+        font-size: 1.5em;
+      }
+    </style>
     <script src="javascripts/scale.fix.js"></script>
+    <script src="javascripts/kefir.min.js"></script>
+    <script src="javascripts/chaiknees.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -34,6 +65,20 @@
 <a id="welcome-to-chaiknees" class="anchor" href="#welcome-to-chaiknees" aria-hidden="true"><span class="octicon octicon-link"></span></a>Welcome to Chaiknees</h3>
 
 <p>A quiz game to learn to read Japanese Quickly.</p>
+
+        <div>
+          <romaji></romaji>
+          <div class="choice">
+            <div><choicea data-choice="0"></choicea></div>
+            <div><choiceb data-choice="1"></choiceb></div>
+            <div><choicec data-choice="2"></choicec></div>
+            <div><choiced data-choice="3"></choiced></div>
+          </div>
+        </div>
+        <powerup></powerup>
+        <responsetime></responsetime>
+        <grammar>
+        </grammar>
       </section>
       <footer>
         <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
